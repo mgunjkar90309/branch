@@ -1,0 +1,226 @@
+____________________________________________________________________________________________
+
+
+------------------------------------
+# Introduction
+
+Python features-
+
+1. Open source and freeware.
+2. High level language.
+3. Platform independent.   ***
+4. Interpreter based.      ***
+5. Easy to learn.
+6. Lacs of library.
+7. Dynamically typed language.   ***
+8. Python supports OOPS/POP.
+------------------------------------
+
+
+--------------------------------------------------------------------------------------------
+Python limitations-
+
+1. can't be used for mobile app development
+2. backward compatibility not supported (i.e. old version code can't be used on new version)
+--------------------------------------------------------------------------------------------
+
+____________________________________________________________________________________________
+
+
+
+__________________________________________
+
+
+------------------------------------------
+# data types, int, float, str, bool
+
+1. int     - complete data without decimal
+
+     1, 4, 55, 7786, 632, 63221
+    
+2. float   - incomplete data with decimal
+
+     35.3, -2.34, or 3597.34987
+
+3. str     - single char or multiple char
+
+4. None    - empty variable
+
+5. bool    - True/False
+
+6. complex - real + img constant
+------------------------------------------
+
+__________________________________________
+
+
+
+________________________________________________________________________________________________________________________________________________
+
+
+# data type, list, tuple, set, dict, string, frozenset
+
+---------------------------------------------------------------------------------------------------------
+<1> List:- []
+
+Insertion:
+xyz.insert(index,element) - Adds an element at the specified position
+xyz.append(element)       - Adds an element at the end of the list
+xyz.extend([])	          - Add the elements of a list (or any iterable), to the end of the current list
+
+Deletion:
+xyz.remove(element) - Removes the first item with the specified value
+xyz.pop(index)	    - Removes the element at the specified position, if no value then deletes last element
+xyz.clear()	    - Removes all the elements from the list
+
+Other functions:
+xyz.index(element)     - Returns the index of the first element with the specified value
+xyz.sort()	       - Sorts the list
+xyz.sort(reverse=True) - Sorts the list in reverse
+xyz.count(element)     - Returns the number of elements with the specified value
+xyz.reverse()	       - Reverses the order of the list
+
+copy()	               - Returns a copy of the list
+---------------------------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+<2> Tuple:-  ()
+
+xyz.index(element)
+xyz.count(element)
+
+e.g. :-  a[5].append('yo')   # it can only work if we have list element inside tuple
+
+No functionality, only typecasting can be done to insert value
+
+x = [1, 2, 3]
+y = tuple(x)    # y becomes (1, 2, 3)
+print(y)
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------------------------------------------------
+<3> Set:-   {}
+
+insertion:-
+
+    xyz.add(element)       - single element at random position
+    xyz.update([elements]) - multiple elements at random position
+
+    deletion:-
+
+    xyz.remove(element)  - if element present,delete single element
+    xyz.discard(element) - if element present then delete, if not no error
+    xyz.pop()            - delete random element from set
+    xyz.clear()          - clears the structure
+
+    intersection                 - A.intersection(B)         - element of A common in B
+    difference                   - A.difference(B)           - element of A not common in B
+    union                        - A.union(B)                - common element of both + remaining element
+    symmetric_diff               - B.symmetric_difference(A) - common element from B --> A not shown,rest shown
+    intersection_update          - works same as above, but save the result in same variable, no need to store in new variable
+    difference_update            - works same as above, but save the result in same variable, no need to store in new variable
+    symmetric_difference_update  - works same as above, but save the result in same variable, no need to store in new variable
+
+    issuperset - A.issuperset(B) - 'True' because All elements of B must be matching/common with elements of A
+    issubset   - B.issubset(A)   - 'True' because All elements of B must be matching/common with elements of A
+    isdisjoint - p.isdisjoint(B) - 'True' because No elements of p are matching/present in B
+------------------------------------------------------------------------------------------------------------------------------
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------       
+<4> Dictionary:-
+
+    emp["id"] = 1               - to add single elements
+
+    emp.update({'key':'value'}) - to add multiple elements in dictionary
+    
+    emp.get(key,default value)  - to access values -- if key present -- show it -- if not, it does not give any error and show default value
+
+    emp.keys()                - return all keys
+    emp.values()              - return all values
+    emp.items()               - return all items
+
+    emp.pop(key)              - delete item using key
+    emp.popitem()             - delete item in LIFO order
+    emp.clear()               - delete all items
+
+    emp.fromkeys(keys)        - construct dict from keys only (assign none as values for all)
+    emp.setdefault(key,value) - if key present then do nothing ,if not then add new key,value pair/item
+-------------------------------------------------------------------------------------------------------------------------------------------
+     
+
+------------------------------------------------------------------------------------------------------------------------------------------------  
+<5> String:-
+
+a = tHe PythOn  # this is used in below examples
+
+    a.lower      - the python
+    a.upper      - THE PYTHON
+    a.title      - The Python
+    a.swapcase   - ThE pYTHoN
+    a.capitalize - The python
+
+    a.startswith('t') - True
+    a.endswith('a')   - False
+
+    a = input('enter your name:') - to enter string
+
+    count('t') - number of time this letter appeared = 2
+    index('p') - 4
+
+    a.strip()   - remove whitespace from string both side
+    a.lstrip()  - to remove left side whitespaces
+    a.rstrip()  - to remove rightside
+
+    a.isnumeric() - numbers
+    a.isalpha()   - characters
+    a.isalnum()   - numbers + characters
+
+    split()    - list - it is use to break/split string on separator -> email = 'test@gmail.com' -> email.split('@')[0] = test
+    join()     - opposite of split -> temp = ['abc','def'] -> '-'.join(temp) -> abc-def
+
+    find()     - to find substring in given string - if found it will return its starting index [positive index] - if not then it will return -1
+
+    .format    -  "addition of {} and {} is {}".format(a,b,c)
+
+    raw format -  f'addition of {a} and {b} is {c}'  -    (to inject dynamic content)
+------------------------------------------------------------------------------------------------------------------------------------------------
+        
+
+------------------------------------------------------------------------------------------------------------------------------------
+<6> Frozenset:-
+
+    copy        A = frozenset([1, 2, 3, 4])   ---   C = A.copy()   ---   print(C)   ---   The output will be frozenset({1, 2, 3, 4})
+    difference
+    intersection
+    isdisjoint
+    issubset
+    issuperset
+    symmetric_difference
+    union
+------------------------------------------------------------------------------------------------------------------------------------
+
+________________________________________________________________________________________________________________________________________________
+
+
+
+______________________________________________________
+
+
+------------------------------------------------------
+# Typecasting
+
+Type Cast:
+    conversion 
+    one type of data type into another
+    
+int    -->  float  --  
+float  -->  int    --  a = 66.8   --  int(a)  --  66
+int    -->  str    --  a = 75     --  str(a)  --  '75'
+str    -->  int    --  a = '619'  --  int(a)  --  619
+------------------------------------------------------ 
+
+______________________________________________________
+

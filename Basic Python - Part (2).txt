@@ -1,0 +1,133 @@
+_______________________________________________________________________________________________
+
+
+-----------------------------------------------------------------------------------------------
+# Operators
+
+    1. Arithmetic Operators                    --> + , - , * , / , % , ** , //
+    2. Comparision/Conditional Operators       --> < , > , <= , >= , != , ==
+    3. Logical Operators                       --> and , or , not
+    4. Membership operators                    --> in , not in
+    5. Assigment Operators                     --> = , += , -= , *= , /=
+    6. Identity operators                      --> is , ==
+    7. Bitwise operators/shift operators       --> & , | , binary to decimal, decimal to binary
+    8. Ternary operators -- lambda expression  -->
+-----------------------------------------------------------------------------------------------
+
+_______________________________________________________________________________________________
+
+
+
+_________________________________________________________________________
+
+
+# Control statements (if, if-else, if-else ladder, nested if-else)
+
+flow control statements:
+
+---------------------------------------
+1. simple if  (single condition)
+
+filename = input("Enter the filename:")
+if filename.endswith('.pdf'):
+    print("file processing.....")
+print("thanks")
+---------------------------------------
+
+
+-----------------------------------
+2. if-else  (two condition)
+
+x = int(input('enter the number:'))
+if x%2==0:
+    print('number is even')
+else:
+    print('number is odd')
+-----------------------------------
+
+
+--------------------------------------------------------
+3. if-else ladder  (multiple condition of same variable)
+
+sal = int(input("Enter the salary:"))
+
+if sal>10000 and sal<=25000:
+    print("New salary is:",sal+sal*(5/100))
+    print("Salary has been increased by 5%")
+elif sal>25000 and sal<=50000:
+    print("New salary is:",sal+sal*(10/100))
+    print("Salary has been increased by 10%")
+elif sal>50000 and sal<=100000:
+    print ("New salary is:",sal+sal*(15/100))
+    print("Salary has been increased by 15%")
+else:
+    print("Invalid salary")
+--------------------------------------------------------
+
+
+-------------------------------------------------------------------------
+4. nested if-else  (multiple condition of same variable in nested format)
+
+empid = input("Enter the EMP id:")
+if empid.startswith('PN'):
+    if len(empid)==10:
+        if empid.endswith("IN"):
+            print("Valid empid")
+        else:
+            print("please check ending pattern")
+    else:
+        print("please check length")
+else:
+    print("please check starting pattern")
+-------------------------------------------------------------------------
+
+_________________________________________________________________________
+
+
+
+______________________________________________________________________________________
+
+
+--------------------------------------------------------------------------------------
+# Control statements (for loop)
+
+py_list = [76,234,87,34,587,3,47876,34,]
+
+for temp in py_list:
+    print(temp)
+
+
+emails = ['test@gmail.com','python@yahoo.com','sample@redffmail.com','temp@gmail.com']
+
+for email in emails:
+    if email.endswith('@gmail.com'):
+        print(email)
+
+
+for i in range(5,55,6):
+    print(i)
+--------------------------------------------------------------------------------------
+
+______________________________________________________________________________________
+
+
+
+______________________________________________________
+
+
+------------------------------------------------------
+# Control statements (while loop)
+
+while True:
+    a = int(input("Enter the number:"))
+    b = int(input("Enter the number:"))
+    c = a+b
+    print("Addition of {} and {} is {}".format(a,b,c))
+    choice = input("Do you want to continue[yes|no]:")
+    if choice.lower()=='no':
+        print("Thanks for visiting")
+        break
+------------------------------------------------------
+
+______________________________________________________
+
